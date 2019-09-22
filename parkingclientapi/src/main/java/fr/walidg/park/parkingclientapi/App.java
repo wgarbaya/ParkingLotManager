@@ -1,4 +1,4 @@
-package fr.walidg.park.parkingclientapi;
+﻿package fr.walidg.park.parkingclientapi;
 
 import java.time.LocalDateTime;
 
@@ -28,7 +28,6 @@ public class App
 		try {
 			Electic20KwVehicule v = new Electic20KwVehicule("ID");
 			Slot s = plm.getASlot(v);
-			s.setOccupiedSince(LocalDateTime.now().minusDays(1));
 			Float price = plm.freeASlot(v);
 			System.out.println(String.format("The price is :  %10.2f €", price));
 
