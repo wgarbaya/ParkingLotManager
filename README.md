@@ -108,7 +108,7 @@ public class Test {
 	public static void main(String[] args) {
 		Test t = new Test();
 		ParkingLotManager plm = new ParkingLotBuilder()
-									.withPrining(t::freepricing_price)
+									.withPricing(t::freepricing_price)
 									.build();
 	}
 }
