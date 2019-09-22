@@ -23,7 +23,7 @@ public class App
 				.withElectric20Slots(1)
 				.withElectric50Slots(0)
 				.withPetrolSlots(10)
-				.withPrincing(ParkingLotBuilder::FixedAndTimePricing)
+				.withPricing(ParkingLotBuilder::FixedAndTimePricing)
 				.build();
 		try {
 			Electic20KwVehicule v = new Electic20KwVehicule("ID");

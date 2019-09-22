@@ -24,13 +24,13 @@ public class ParkingLotManager {
 	private E20Slots e20;
 	private E50Slots e50;
 	private ConcurrentHashMap<String, Slot> occupiedSlots = new ConcurrentHashMap<String, Slot>();
-	private Function<Slot, Float> princing;
+	private Function<Slot, Float> pricing;
 
 	protected ParkingLotManager(int nb_of_petrol, int nb_of_electric20, int nb_of_electric50, Function<Slot, Float> pricing) {
 		p = new PetrolSlots(nb_of_petrol);
 		e20 = new E20Slots(nb_of_electric20);
 		e50 = new E50Slots(nb_of_electric50);
-		this.princing = pricing;
+		this.pricing = pricing;
 
 	}
 	/**
@@ -72,7 +72,7 @@ public class ParkingLotManager {
 
 			throw new IllegalArgumentException(EXP_MSG_VEHICULE_NOT_INSIDE);
 		}
-		Float price = princing.apply(slot);
+		Float price = pricing.apply(slot);
 		Slot replacement = new Slot(slot.getId(), slot.getType());
 		switch (slot.getType()) {
 		case ELECTRIC_20:			 

@@ -36,7 +36,7 @@ public class ParkingLotBuilder {
 		return this;
 	}
 	
-	public ParkingLotBuilder withPrincing(Function<Slot, Float> ps) {
+	public ParkingLotBuilder withPricing(Function<Slot, Float> ps) {
 		this.pricingStategie = ps;
 		return this;
 	}
