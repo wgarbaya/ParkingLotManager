@@ -4,7 +4,7 @@
 #### This project has been tested and compiled only with Java 8.
 
 ## Compile parent project
-If you what to use the Java API as a maven dependency please checkout the project is folder "parking" and run :
+If you want to use the Java API as a maven dependency please checkout the project in folder "parking" and run :
 ```shell
 mvn install
 ```
@@ -21,7 +21,7 @@ The preferred way to start the project in client side is to add the dependency t
 </dependency>
 ```
 ## Install to client using Java dependency (Alternative)
-Without maven, please add to your project all files in "WithoutMaven" folder in client your build path.
+Without maven, please add to your project all files in "WithoutMaven" folder in your client project's build path.
 
 ## Usage
 
@@ -33,7 +33,7 @@ In the client application we need to create a ParkingLotBuilder to initiate a pa
 				.withElectric20Slots(1)
 				.withElectric50Slots(0)
 				.withPetrolSlots(10)
-				.withPrincing(ParkingLotBuilder::FixedAndTimePricing)
+				.withPricing(ParkingLotBuilder::FixedAndTimePricing)
 				.build();
 ```
 
@@ -51,8 +51,8 @@ Number of parking Slots available for Electric 50KW cars
 Number of parking Slots available for petrol cars
 * Type: `Integer`
 * Default: `0` 
-#### withPrincing
-Princing function, can be a static or not function
+#### withPricing
+Pricing function, can be a static or not function
 * Type: `Function<Slot, Float>`
 * Default: `s -> 10.5f` 
 Build in function can be used as : 
@@ -67,7 +67,7 @@ ParkingLotBuilder::FixedAndTimePricing
 - No casting issue when converting price (duration of stay must be reasonable), same for number of slots.
 
 ### I/O parking
-- Create a Vehicle from import fr.walidg.park.parking.ParkingClient.*.
+- Create a Vehicle from fr.walidg.park.parking.ParkingClient.*.
 - Request a slot from the parking using plm.getASlot(vehicle).
 - Free the slot to exit the parking using plm.freeASlot(vehicle).
 
@@ -108,7 +108,7 @@ public class Test {
 	public static void main(String[] args) {
 		Test t = new Test();
 		ParkingLotManager plm = new ParkingLotBuilder()
-									.withPrincing(t::freepricing_price)
+									.withPrining(t::freepricing_price)
 									.build();
 	}
 }
