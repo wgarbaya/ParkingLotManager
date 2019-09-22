@@ -60,10 +60,6 @@ Build in function can be used as :
 ParkingLotBuilder::TimeOnlyPricing
 ParkingLotBuilder::FixedAndTimePricing
 ```
-#### Pricing
-Number of parking Slots available for petrol cars
-* Type: `Integer`
-* Default: `0` 
 
 ### Hypothesis
 - No cheating user (ex. changing Vehicle plates inside the parking)
